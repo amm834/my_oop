@@ -1,6 +1,6 @@
 <?php
 
-try{
+
 function readFileName($fileName){
   if(file_exists($fileName)){
   $handler = fopen($fileName,'r');
@@ -11,9 +11,11 @@ function readFileName($fileName){
   throw new Exception("Fie Not Found!");
 }
 }
+try{
+  readFileName("amm.txt");
 }catch(Exception $e){
   echo $e->getMessage();
 }
-readFileName("amm.txt");
+
 
 ?>
